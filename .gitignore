@@ -1,0 +1,7 @@
+panel.db
+panel.db-wal
+panel.db-shm
+demos/
+__pycache__/
+*.pyc
+.DS_Store

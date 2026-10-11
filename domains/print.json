@@ -1,0 +1,41 @@
+{
+  "id": "print",
+  "name": "Print shop",
+  "tagline": "Orders moving from proof to press to shipping",
+  "terms": {
+    "job": "order", "jobs": "Orders", "job_new": "New order…",
+    "resource": "press", "resources": "Presses",
+    "customer": "Client", "capacity": "Runs left today",
+    "dispatch": "Send to press", "board": "Production"
+  },
+  "statuses": [
+    ["new", "Intake"], ["queued", "Proof approved"], ["running", "On press"],
+    ["done", "Shipped"], ["failed", "Reprint"]
+  ],
+  "resource_kind": "press",
+  "resources": [
+    ["HP Indigo 7900", "active", 40, 31],
+    ["Roland VG3 · wide format", "active", 20, 9],
+    ["Heidelberg XL 75", "active", 30, 27],
+    ["Epson SureColor P9000", "active", 25, 4],
+    ["DTG · Brother GTX", "active", 60, 58],
+    ["Laser cutter · Trotec", "paused", 15, 0],
+    ["Screen line 2", "blocked", 30, 30],
+    ["Embroidery · Tajima", "active", 40, 12],
+    ["Binder · Duplo 350", "active", 50, 22],
+    ["Cutter · Polar 78", "active", 50, 6]
+  ],
+  "customers": ["Northwind Coffee", "Cedar Dental", "Blue Harbor Hotel",
+                "Vertex Gym", "Ridgeline Brewing", "Copper Lane Boutique",
+                "Tallgrass Festival", "Meridian Clinic"],
+  "titles": [
+    "500 business cards · {n}pt", "Roll banner 33x80 · job {n}",
+    "Menu reprint · batch {n}", "T-shirts x120 · design {n}",
+    "Window decals · store {n}", "Wedding invites · set {n}",
+    "Trade show backdrop {n}", "Vinyl vehicle wrap {n}",
+    "Booklet 24pp · run {n}", "Sticker sheets x1000 · {n}"
+  ],
+  "errors": ["colour off proof — client rejected", "stock ran out mid-run",
+             "press jam, sheet damaged"],
+  "block_note": "Screen line 2 pulled after 3 reprints in a row"
+}

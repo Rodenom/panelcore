@@ -1,0 +1,39 @@
+{
+  "id": "content",
+  "name": "Content studio",
+  "tagline": "Publishing pipeline across many channels",
+  "terms": {
+    "job": "video", "jobs": "Videos", "job_new": "New video title…",
+    "resource": "channel", "resources": "Channels",
+    "customer": "Client", "capacity": "Uploads left today",
+    "dispatch": "Publish queued", "board": "Pipeline"
+  },
+  "statuses": [
+    ["new", "Draft"], ["queued", "Scheduled"], ["running", "Uploading"],
+    ["done", "Published"], ["failed", "Rejected"]
+  ],
+  "resource_kind": "channel",
+  "resources": [
+    ["Channel · Northwind Media", "active", 100, 63],
+    ["Channel · Blue Harbor", "active", 100, 41],
+    ["Channel · Vertex Studio", "active", 100, 88],
+    ["Channel · Ridgeline", "active", 100, 12],
+    ["Channel · Copper Lane", "active", 100, 97],
+    ["Channel · Halcyon", "paused", 100, 0],
+    ["Channel · Ironwood", "blocked", 100, 100],
+    ["Channel · Sable Creek", "active", 100, 29],
+    ["Channel · Tallgrass", "active", 100, 55],
+    ["Channel · Meridian", "active", 100, 8]
+  ],
+  "customers": ["Northwind", "Blue Harbor", "Vertex", "Ridgeline",
+                "Copper Lane", "Halcyon", "Sable Creek", "Tallgrass"],
+  "titles": [
+    "Spring promo · cut {n}", "Product demo · v{n}", "Testimonial reel {n}",
+    "Unboxing short {n}", "Before / after {n}", "Founder story {n}",
+    "How-to · step {n}", "Comparison clip {n}", "Customer Q&A {n}",
+    "Behind the scenes {n}"
+  ],
+  "errors": ["daily upload quota reached", "token expired — needs re-auth",
+             "source file missing"],
+  "block_note": "Paused Channel · Ironwood after 3 failures in a row"
+}

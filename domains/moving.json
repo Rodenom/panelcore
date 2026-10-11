@@ -1,0 +1,41 @@
+{
+  "id": "moving",
+  "name": "Moving & hauling",
+  "tagline": "Pickups and drop-offs assigned to trucks",
+  "terms": {
+    "job": "run", "jobs": "Runs", "job_new": "New run…",
+    "resource": "truck", "resources": "Trucks",
+    "customer": "Customer", "capacity": "Stops left today",
+    "dispatch": "Assign to trucks", "board": "Today's runs"
+  },
+  "statuses": [
+    ["new", "Booked"], ["queued", "Loaded"], ["running", "On the road"],
+    ["done", "Delivered"], ["failed", "Problem"]
+  ],
+  "resource_kind": "truck",
+  "resources": [
+    ["Truck 1 · 26ft · Marcus", "active", 6, 4],
+    ["Truck 2 · 16ft · Elena", "active", 8, 3],
+    ["Truck 3 · box · Dominic", "active", 6, 6],
+    ["Truck 4 · 26ft · Priya", "active", 6, 2],
+    ["Roll-off 8 · 20 yard", "active", 5, 5],
+    ["Roll-off 9 · 30 yard", "paused", 5, 0],
+    ["Truck 6 · transmission", "blocked", 6, 6],
+    ["Van 3 · courier · Owen", "active", 14, 9],
+    ["Van 4 · courier · Marta", "active", 14, 6],
+    ["Subcontractor · Ridgeway Haul", "active", 4, 1]
+  ],
+  "customers": ["Riverbend Apartments", "Cedar Dental", "Northwind Offices",
+                "Blue Harbor Hotel", "Copper Lane Retail", "Tallgrass Gym",
+                "Meridian Clinic", "Sable Creek Storage"],
+  "titles": [
+    "2 bedroom move · job {n}", "Office relocation · floor {n}",
+    "Dumpster drop-off · site {n}", "Dumpster pickup · site {n}",
+    "Construction debris haul {n}", "Same day courier · route {n}",
+    "Furniture delivery · order {n}", "Storage unit clear-out {n}",
+    "Appliance removal · unit {n}", "Pallet run · stop {n}"
+  ],
+  "errors": ["nobody at the address", "truck full, second trip needed",
+             "driver ran out of hours"],
+  "block_note": "Truck 6 pulled off the board after 3 breakdowns in a row"
+}

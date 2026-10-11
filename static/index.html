@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReShed — your work panel</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div id="login" class="login-wrap">
+  <form class="login-card" id="login-form">
+    <div class="logo">Re<span>Shed</span></div>
+    <p class="muted" id="login-tagline">Internal operations panel</p>
+    <input name="login" placeholder="Login" autocomplete="username" value="admin">
+    <input name="password" type="password" placeholder="Password"
+           autocomplete="current-password" value="demo">
+    <button type="submit">Sign in</button>
+    <div class="err" id="login-err"></div>
+    <p class="hint">Demo accounts — <b>admin</b> (full), <b>dana</b> (operator),
+       <b>sam</b> (read-only). Password: <b>demo</b></p>
+  </form>
+</div>
+
+<div id="app" hidden>
+  <header>
+    <div class="logo">Re<span>Shed</span></div>
+    <nav>
+      <button data-tab="dashboard" class="on">Dashboard</button>
+      <button data-tab="board" id="nav-board">Board</button>
+      <button data-tab="resources" id="nav-resources">Resources</button>
+      <button data-tab="activity">Activity</button>
+      <button data-tab="team">Team</button>
+    </nav>
+    <div class="who">
+      <select id="domain-pick" title="Same panel, different business"></select>
+      <span id="who-name"></span><span class="role" id="who-role"></span>
+      <button class="ghost" id="logout">Sign out</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="tab-dashboard">
+      <div class="cards" id="stat-cards"></div>
+      <div class="panel">
+        <div class="panel-head">
+          <h2 id="cap-title">Daily capacity</h2>
+          <span class="muted" id="cap-summary"></span>
+        </div>
+        <div id="capacity"></div>
+      </div>
+    </section>
+
+    <section id="tab-board" hidden>
+      <div class="toolbar">
+        <input id="new-title" placeholder="New job title…">
+        <input id="new-customer" placeholder="Customer" class="narrow">
+        <button id="add-job">Add</button>
+        <span class="spacer"></span>
+        <button class="primary" id="dispatch">Dispatch queued</button>
+        <a class="ghost" href="/api/export.csv">Export CSV</a>
+      </div>
+      <div class="board" id="board"></div>
+    </section>
+
+    <section id="tab-resources" hidden>
+      <div class="panel">
+        <div class="panel-head"><h2 id="res-title">Resources</h2>
+          <span class="muted">Click a row to pause or resume it</span></div>
+        <table id="res-table"></table>
+      </div>
+    </section>
+
+    <section id="tab-activity" hidden>
+      <div class="panel">
+        <div class="panel-head"><h2>Activity</h2></div>
+        <ul class="feed" id="feed"></ul>
+      </div>
+    </section>
+
+    <section id="tab-team" hidden>
+      <div class="panel">
+        <div class="panel-head"><h2>Team</h2>
+          <span class="muted">Roles decide what each person can touch</span></div>
+        <table id="team-table"></table>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" hidden></div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

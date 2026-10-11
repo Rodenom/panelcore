@@ -1,0 +1,41 @@
+{
+  "id": "field",
+  "name": "Field service",
+  "tagline": "Work orders dispatched to crews",
+  "terms": {
+    "job": "work order", "jobs": "Work orders", "job_new": "New work order…",
+    "resource": "crew", "resources": "Crews",
+    "customer": "Customer", "capacity": "Slots left today",
+    "dispatch": "Dispatch to crews", "board": "Schedule"
+  },
+  "statuses": [
+    ["new", "Requested"], ["queued", "Scheduled"], ["running", "On site"],
+    ["done", "Completed"], ["failed", "Problem"]
+  ],
+  "resource_kind": "crew",
+  "resources": [
+    ["Crew 1 · Marcus & Tyler", "active", 8, 5],
+    ["Crew 2 · Elena & Rob", "active", 8, 3],
+    ["Crew 3 · Dominic", "active", 6, 6],
+    ["Crew 4 · Priya & Josh", "active", 8, 2],
+    ["Crew 5 · Nathan", "active", 6, 5],
+    ["Crew 6 · Sofia & Ben", "paused", 8, 0],
+    ["Van 12 · in the shop", "blocked", 8, 8],
+    ["Crew 7 · Owen", "active", 6, 1],
+    ["Crew 8 · Marta & Luis", "active", 8, 4],
+    ["Subcontractor · Halcyon HVAC", "active", 4, 1]
+  ],
+  "customers": ["Riverbend Apartments", "Cedar Dental", "Northwind Offices",
+                "Blue Harbor Hotel", "Copper Lane Retail", "Tallgrass Gym",
+                "Meridian Clinic", "Sable Creek Storage"],
+  "titles": [
+    "AC not cooling · unit {n}", "Annual maintenance · site {n}",
+    "Leak under sink · apt {n}", "Thermostat replacement {n}",
+    "Emergency call-out {n}", "Filter change · floor {n}",
+    "Water heater install {n}", "Boiler inspection {n}",
+    "Quote visit · job {n}", "Warranty follow-up {n}"
+  ],
+  "errors": ["customer not on site", "part out of stock",
+             "crew ran out of hours"],
+  "block_note": "Van 12 taken off the schedule after 3 failed call-outs"
+}
